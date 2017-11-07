@@ -2,15 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class scrMyBullet : MonoBehaviour {
+namespace prjTeleporter
+{
+    public class scrMyBullet : MonoBehaviour
+    {
 
-	// Use this for initialization
-	void Start () {
+        // Use this for initialization
+        void Start()
+        {
 		
-	}
+        }
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        // Update is called once per frame
+        void Update()
+        {
+            GameObject Target = null;
+            float mostNearDist = 999999.0f;
+
+            foreach (GameObject Candidate in scrEmShipBase.EmShips) {
+                float dist = Vector3.Distance (gameObject.transform.position, Candidate.transform.position);
+                if (dist < mostNearDist) {
+                    mostNearDist = dist;
+                    Target = Candidate;
+                }
+            }
+
+            if (Target == null) {
+                //  画面外へ向けて
+                //  mostNearDist = 
+            }
+
+        }
+    }
 }

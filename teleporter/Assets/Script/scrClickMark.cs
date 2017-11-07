@@ -2,28 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class scrClickMark : MonoBehaviour
+namespace prjTeleporter
 {
 
-    Vector3 scale;
-
-    // Use this for initialization
-    void Start()
+    public class scrClickMark : MonoBehaviour
     {
-        scale = gameObject.transform.localScale;
-    }
+
+        Vector3 scale;
+
+        // Use this for initialization
+        void Start()
+        {
+            scale = gameObject.transform.localScale;
+        }
 	
-    // Update is called once per frame
-    void Update()
-    {
-        scale.x -= 0.01f;
-        scale.y -= 0.01f;
-        scale.z -= 0.01f;
-        transform.localScale = scale;
+        // Update is called once per frame
+        void Update()
+        {
+            scale.x -= 0.01f;
+            scale.y -= 0.01f;
+            scale.z -= 0.01f;
+            transform.localScale = scale;
 
-        if (scale.x <= 0.0f) {
-            gameObject.transform.SetParent (null);
-            Destroy (gameObject);
+            if (scale.x <= 0.0f) {
+                gameObject.transform.SetParent (null);
+                Destroy (gameObject);
+            }
         }
     }
 }

@@ -2,15 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class scrEmBullet1 : MonoBehaviour {
+namespace prjTeleporter
+{
 
-	// Use this for initialization
-	void Start () {
+    public class scrEmBullet1 : MonoBehaviour
+    {
+
+        // Use this for initialization
+        void Start()
+        {
 		
-	}
+        }
 	
-	// Update is called once per frame
-	void Update () {
+        // Update is called once per frame
+        void Update()
+        {
 		
-	}
+        }
+    }
 }
