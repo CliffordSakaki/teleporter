@@ -9,33 +9,34 @@ namespace prjTeleporter
     {
 
         // Use this for initialization
-        void Start ()
+        void Start()
         {
 		
         }
 
         // Update is called once per frame
-        void Update ()
+        void Update()
         {
 		
         }
 
 
-        public void setHeadToTarget (Vector3 posTarget)
+        public void setHeadToTarget(Vector3 posTarget)
         {
             Head = posTarget - transform.position;
         }
 
+        //進行方向を表す単位ベクトル
         private Vector3 head;
 
         public Vector3 Head {
-
-            set {//進行方向を表す単位ベクトル 
+            set {
                 head = Vector3.Normalize (value);
             }
             get{ return head; }
         }
 
+        //移動速度
         private float speed;
 
         public float Speed {
@@ -43,6 +44,7 @@ namespace prjTeleporter
             get{ return speed; }
         }
 
+        //移動ベクトル
         public Vector3 Vector {
             get{ return Head * Speed; }
         }
