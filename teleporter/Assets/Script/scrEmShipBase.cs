@@ -5,23 +5,23 @@ using UnityEngine;
 namespace prjTeleporter
 {
 
-    public class scrEmShipBase : MonoBehaviour
+    public class scrEmShipBase : scrObjBase
     {
         public  static List<GameObject> EmShips = new List<GameObject> ();
 
         // Use this for initialization
-        void Start()
+        void Start ()
         {
             EmShips.Add (gameObject);
         }
 	
         // Update is called once per frame
-        void Update()
+        void Update ()
         {
 		
         }
 
-        protected void Term()
+        protected void Term ()
         {
             EmShips.Remove (gameObject);
         }

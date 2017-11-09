@@ -4,17 +4,17 @@ using UnityEngine;
 
 namespace prjTeleporter
 {
-    public class scrMyBullet : MonoBehaviour
+    public class scrMyBullet : scrObjBase
     {
 
         // Use this for initialization
-        void Start()
+        void Start ()
         {
 		
         }
 	
         // Update is called once per frame
-        void Update()
+        void Update ()
         {
             GameObject Target = null;
             float mostNearDist = 999999.0f;
