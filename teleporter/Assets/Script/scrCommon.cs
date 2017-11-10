@@ -17,9 +17,10 @@ public class scrCommon : MonoBehaviour
 		
     }
 
-    static private     Rect worldRect;
     //メインカメラからワールド座標系の描画範囲を求める
-    public static Rect WorldRect {
-        get{ return WorldRect; }
+    static private     Rect worldRect2D;
+
+    public static Rect WorldRect2D {
+        get{ return worldRect2D; }
     }
 }
